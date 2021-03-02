@@ -33,3 +33,20 @@ public class Main {
     }
 }
 ```
+
+# Adding to project (gradle)
+add to repositories
+```gradle
+repositories {
+		maven { url 'https://jitpack.io' }
+}
+```
+
+add as a dependency
+```gradle
+dependencies {
+	   implementation 'com.github.Gav06:EasyEvents:1.0'
+}
+```
+
+Read the jitpack.io page for maven, sbt, etc.
