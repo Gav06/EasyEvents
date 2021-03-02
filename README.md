@@ -1,5 +1,5 @@
 # EasyEvents
-Made with only 60 lines of code (including spaces)
+Made with only 46 lines of code (including spaces)
 
 
 the purpose of this is just to have an extremely simple and lightweight event handler, that uses lambdas and reflection
