@@ -45,7 +45,7 @@ repositories {
 add as a dependency
 ```gradle
 dependencies {
-	compile 'com.github.Gav06:EasyEvents:1.2'
+	compile 'com.github.Gav06:EasyEvents:1.2.1'
 }
 ```
 
