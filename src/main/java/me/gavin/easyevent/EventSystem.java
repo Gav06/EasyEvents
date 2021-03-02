@@ -5,14 +5,15 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class EventSystem {
 
-    public final Map<Object, List<Method>> regMap = new HashMap<>();
+    private final HashMap<Object, List<Method>> regMap = new HashMap<>();
 
     public void register(Object obj) {
+        if (regMap.containsKey(obj))
+            return;
         regMap.put(obj, Arrays.stream(obj.getClass().getDeclaredMethods()).filter(method -> method.isAnnotationPresent(EventListener.class)).collect(Collectors.toList()));
     }
 
@@ -25,9 +26,7 @@ public class EventSystem {
             if (method.getParameterTypes()[0] == object.getClass()) {
                 try {
                     method.invoke(o, object);
-                } catch (IllegalAccessException | InvocationTargetException e) {
-                    e.printStackTrace();
-                }
+                } catch (IllegalAccessException | InvocationTargetException e) { e.printStackTrace(); }
             }
         }));
     }
