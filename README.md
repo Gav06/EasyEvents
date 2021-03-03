@@ -20,14 +20,14 @@ public class Main {
         eventSystem.register(this);
         
         //Push string through event bus
-        eventSystem.post("Hello world");
+        eventSystem.post("Hello, World!");
     }
     
     //Listening for string events
     @EventListener
-    public void onEvent(String s) {
-        // printing out string sent through event bus
-        System.out.println(s);
+    public void onEvent(String string) {
+        //Printing out string sent through event bus
+        System.out.println(string);
     }
 }
 ```
