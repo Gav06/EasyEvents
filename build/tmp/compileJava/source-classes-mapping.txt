@@ -1,6 +1,0 @@
-me/gavin/easyevent/EventListener.java
- me.gavin.easyevent.EventListener
-me/gavin/easyevent/EventSystem.java
- me.gavin.easyevent.EventSystem
-me/gavin/easyevent/Main.java
- me.gavin.easyevent.Main
